@@ -7,12 +7,32 @@
 
 </style>
 <script>
-function validateForm() {
-  var x = document.forms["myForm"]["special"].value;
-  if (x == "" || x == null) {
-    alert("special must be filled out , As is can be used to forget Password ;-)");
-    return false;
-  }
+function checkPassword(form) {
+		password1 = form.name.value;
+                password2 = form.email.value;
+ 		 password11 = form.special.value;
+                password12 = form.mobile_number.value;
+		password13 = form.password.value;
+                
+                // If password not entered
+                if (password1 == '')
+                    alert ("Please enter Name");
+                      
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm Email id");
+		else if (password11 == '')
+                    alert ("Please enter confirm Special character ");
+		else if (password12 == '')
+                    alert ("Please enter Mobile number");
+		else if (password13 == '')
+                    alert ("Please enter password");
+                      
+                
+
+
+
+
 }
 
 </script>
@@ -41,7 +61,7 @@ function validateForm() {
 <div class="formindex">
 <div class="qwew">
 <div class="main">
-	<form name="myForm" class="form1" action="insert.php" onsubmit="return validateForm()" onsubmit="return validateForm1()" method="post">
+	<form name="myForm" class="form1" action="insert.php" onsubmit="return checkPassword(this)"  method="post">
 
 	<h1 class="hsign">Sign Up</h1>
 	<input name="name" class="name" type="name" placeholder="Enter Name" maxlength="20"><br><br>
