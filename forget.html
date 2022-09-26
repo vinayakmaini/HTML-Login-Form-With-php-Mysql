@@ -1,0 +1,80 @@
+<html>
+<head>
+ <script>
+          
+            // Function to check Whether both passwords
+            // is same or not.
+            function checkPassword(form) {
+                password1 = form.password1.value;
+                password2 = form.password2.value;
+  
+                // If password not entered
+                if (password1 == '')
+                    alert ("Please enter Password");
+                      
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+                      
+                // If Not same return False.    
+                else if (password1 != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+  
+              
+            }
+</script>
+
+<link rel="stylesheet" href="2.css">
+<link rel="stylesheet" href="1.css">
+<title> Login Page </title>
+<style>
+
+</style>
+<body>
+<header>
+<nav class="navbar">
+<ul class="nomarg">
+<li><a href="2.html"> Home </a></li>
+<li><div class="dropdown">
+    <button class="dropbtn">Login
+     
+    </button>
+    <div class="dropdown-content">
+      <a href="index.html">Sign UP</a>
+      <a href="login.html">Login</a>
+     
+     
+    </div> </li>
+<li><a href> Contact </a></li>
+<li><a href> About </a></li>
+<div class="search">
+<input class="bar" type="text" placeholder="search"></input>
+</div>
+</ul>
+</nav>
+</header>
+<div class="foral">
+<div class="qwew">
+<div class="main">
+	<form class="form1" action="forget.php" method="POST"  onsubmit= "return checkPassword(this)">
+
+	<h2 class="hforget"> Forget Password </h2><br><br>
+	
+	<input name="forgetemail" class="nameq" type="email" placeholder="Enter Email" maxlength="33"><br><br>
+	<input name="forgetspecial" class="nameq" type="name" placeholder="Enter Special Character"><br><br>
+	<input name="password1" class="nameq" type="Password" placeholder="Enter password" maxlength="33"><br><br>
+	<input name="password2" class="nameq" type="password" placeholder="Enter password again"><br><br><br>
+	<input class="button" type="submit" value="Submit" ><br><br>
+
+    <h5 class="bbb"> Don't have an Account  <a class="bbb" href="index.html"> Sign Up</a></h5>
+
+	</form>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

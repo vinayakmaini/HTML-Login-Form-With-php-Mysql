@@ -1,0 +1,62 @@
+<html>
+<head>
+<link rel="stylesheet" href="2.css">
+<link rel="stylesheet" href="1.css">
+<title> Login Page </title>
+<style>
+
+</style>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["special"].value;
+  if (x == "" || x == null) {
+    alert("special must be filled out , As is can be used to forget Password ;-)");
+    return false;
+  }
+}
+
+</script>
+<body>
+</head>
+<nav class="navbar">
+<ul class="nomarg">
+<li><a href="2.html"> Home </a></li>
+<li><div class="dropdown">
+    <button class="dropbtn">Login
+     
+    </button>
+    <div class="dropdown-content">
+      <a href="index.html">Sign UP</a>
+      <a href="login.html">Login</a>
+     
+    </div> </li>
+<li><a href> Contact </a></li>
+<li><a href> About </a></li>
+<div class="search">
+<input class="bar" type="text" placeholder="search"></input>
+</div>
+</ul>
+</nav>
+</header>
+<div class="formindex">
+<div class="qwew">
+<div class="main">
+	<form name="myForm" class="form1" action="insert.php" onsubmit="return validateForm()" onsubmit="return validateForm1()" method="post">
+
+	<h1 class="hsign">Sign Up</h1>
+	<input name="name" class="name" type="name" placeholder="Enter Name" maxlength="20"><br><br>
+	<input name="email" class="name" type="email" placeholder="Email" maxlength="33"><br><br>
+	<input name="mobile_number" class="name" type="tel" placeholder="Mobile number" minlength="10" maxlength="10"><br><br>
+	<input name="password" class="name" type="password" placeholder="Password"><br><br>
+	<input name="special" class="name" type="name" placeholder="Special Character"><br><br>
+	<input class="button" type="submit" value="Submit" class="subm" ><br><br>
+
+<h5>Have an Account   <a class="qwqwqw" href="login.html">Login</a></h5>
+	</form>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
